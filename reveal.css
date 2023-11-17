@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Gloria+Hallelujah&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+}
+
+.btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: Helvetica, sans-serif;
+    font-weight: 1000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.header{
+    position: fixed;
+    width: 100vw;
+    height: 110vh;
+    background: #191a1a;
+    color: #fff;
+    z-index: -2;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+}
+
+.text-container{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #e4decf;
+    z-index: -1;
+}
+
+.text-wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: -50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: default;
+}
+
+.text{
+    width: 300%;
+    /* font-family: "Voyage"; */
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 5vw;
+    text-transform: uppercase;
+    opacity: 0.1;
+}
+
+
+.floating{
+    max-width: 100%;
+}
+
+.not-visible{
+    display:none;
+}
+
+.visible{
+    display: block;
+    height: 100vh;
+    z-index: 100;
+    background-color: #e4decf;
+    position:absolute;
+}
+
+/*   description   */
+.description{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.1em;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 80px;
+    overflow: hidden;
+}
+
+.flex-item{
+    width: 50%; 
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 100px;
+}
+
+.description-img{
+    height: 400px;
+}
+
+.bullshit{
+    position: absolute;
+    /* margin-left: 70em; */
+    right: 5em;
+    bottom: 5em;
+    transform: rotate(-40deg);
+}
+
+@media (max-width: 600px) {
+    .flex-item {
+        width: 100%; 
+    }
+    .description-img{
+        height: 12em;
+    }
+    .bullshit{
+        display: none;
+    }
+}

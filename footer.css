@@ -1,0 +1,53 @@
+.footer{
+    position: absolute;
+    overflow: hidden;
+
+    width: 100vw;
+    background: #e4decf;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.footer-img{
+    position: relative;
+}
+
+.credits{
+    position: relative;
+    display: flex;
+    float: right;
+    font-size: 1.2em;
+    margin-right: 2em;
+    bottom: 30px;
+}
+
+.troops{
+    color: red;
+    text-decoration: none;
+}
+
+.extra-1{
+    position: absolute;
+    height: 200px;
+    display: flex;
+    float: left;
+    top: 0;
+    left: -3em;
+    transform: rotate(40deg);
+}
+
+.extra-2{
+    position: absolute;
+    height: 300px;
+    display: flex;
+    float: left;
+    bottom: 0;
+}
+
+@media (max-width: 991px){
+    .extra-1{
+        display: none;
+    }
+    .extra-2{
+        display: none;
+    }
+}

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Gloria+Hallelujah&display=swap');
+
+.mint-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #232826;
+    overflow: hidden;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.card{
+    position: relative;
+    width: 700px;
+    height: 350px;
+    background-color: #232826;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card .circle::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #d83133;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+}
+
+.card:hover .circle:before{
+    background: #e4decf;
+    clip-path: circle(400px at center);
+}
+
+.card img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 300px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.card:hover img{
+    left: 75%;
+    /* height: 500px; */
+}
+
+.card .content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card:hover .content{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    width: 50%;
+}
+
+.card .content h2{
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 10px;
+}
+
+.mint-text{
+    width: 50px;
+}
+
+.dont{
+    color: white;
+    position: absolute;
+    transform: rotate(-45deg);
+    font-size: 8em;
+    top: -1.1em;
+    left: -1.5em;
+    z-index: 1;
+}
+
+.miss{
+    color: white;
+    position: absolute;
+    /* transform: rotate(-45deg); */
+    font-size: 8em;
+    bottom: -1.5em;
+    right: -2em;
+    z-index: 1;
+}
+
+@media (max-width: 991px) {
+    .card{
+        width: auto;
+        max-width: 350px;
+        align-items: flex-start;
+    }
+    .card:hover{
+        height: 500px;
+    }
+    .card .content{
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+    .card:hover img{
+        top: 60%;
+        left: 50%;
+    }
+
+}
+
+@media (max-width: 420px){
+    .card .content{
+        /* width: 100%;
+        left: 0; */
+        padding: 20px;
+    }
+}
